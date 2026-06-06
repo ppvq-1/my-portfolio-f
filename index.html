@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header id="home" class="">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#home">Meu Portfolio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button onclick="window.location.href='#home';" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Inicio</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button onclick="window.location.href='#aboutme';" class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sobre Mim</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button onclick="window.location.href='#projects';" class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Projetos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button onclick="window.location.href='#contact';" class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contato</button>
+                      </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent" style="text-align: center;">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">Pagina inicial</div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Sobre Mim</div>
+                    <div class="tab-pane fade" id="projects-tab-pane" role="tabpanel" aria-labelledby="projects-tab" tabindex="0">Meus Projetos</div>
+                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Entrar em contato</div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+    <main class="">
+        <section id="aboutme">
+          <div id="profile-picture">
+          <img src="D:\computir\Downloads\PFP.jpg" alt="my profile picture">
+          </div><div id="introduction"><h1>Rafael A. Cascardo</h1>
+          <h2>Desenvolvedor Front-end e Back-end</h2></div>
+          <div id="briefAm"><h3>No momento cursando desenvolvimento front-end e back-end com python, css e html através do SENAC, planejando aprender linguagens de programação como javascript e c#, com interesse em análise de dados, desenvolvimento web e desenvolvimento de jogos.</h3>
+          <h3>veja mais dos meus projetos abaixo!</h3></div>
+        </section>
+
+        <section id="projects">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="C:\Users\Rafael C\Pictures\pythonhangman.png" class="card-img-top" alt="image of my first programming project">
+                <div class="card-body">
+                  <h5 class="card-title">Primeiro Projeto</h5>
+                  <p class="card-text">projeto simples e pequeno feito em python para aula de programação, sendo um jogo da forca no terminal com imagens da forca, letras usadas e erradas, dicionarios com categorias e palavras selecionadas aleatoriamente, além de um pequeno interface para entrar no jogo ou terminar o programa.</p>
+                  <a href="https://github.com/ppvq-1/Python-Classes-Code.git" target="_blank">repositorio do projeto no github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <form action="">
+            <fieldset>
+                <legend>Contato</legend>
+                <a target="_blank" href="https://github.com/ppvq-1">Visite meu perfil do GitHub!</a> <br>
+                <a target="_blank" href="https://wa.me/5521977490023">Mande uma mensagem no meu Whatsapp!</a> <br>
+                <a target="_blank" href="mailto:rafael.a.cascardo.pl@gmail.com">Envie um email!</a>
+            </fieldset>
+          </form>
+        </section>
+
+    </main>
+
+
+    <footer class="">
+      <p>Mais projetos a serem adicionados logo. de uma olhada no meu perfil do github para mais informações!</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+/* ========== RESET & VARIÁVEIS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-card: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #2a2a2a;
+  --accent: #3a6ea5;        /* azul acinzentado, não vibrante */
+  --accent-hover: #4d7db8;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* ========== TIPOGRAFIA ========== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ========== LAYOUT PRINCIPAL ========== */
+header, main, footer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  padding: 1.5rem 1rem 3rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 5rem;   /* evita que navbar cubra o título ao clicar */
+}
+
+/* ========== NAVBAR (tema escuro) ========== */
+.navbar {
+  background-color: #0d0d0d !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+
+.navbar-toggler {
+  border-color: var(--border-color);
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224, 224, 224, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-tabs {
+  border-bottom: none;
+  gap: 0.25rem;
+}
+
+.nav-item .nav-link {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.nav-item .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item .nav-link.active {
+  color: #ffffff;
+  background-color: var(--accent);
+  box-shadow: none;
+}
+
+/* oculta o conteúdo das abas (redundante com as seções) */
+.tab-content {
+  display: none;
+}
+
+/* ========== SEÇÃO SOBRE MIM ========== */
+#aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background: var(--bg-secondary);
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* imagem de perfil */
+#profile picture {
+  display: block;
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+#profile picture img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#profile picture img:hover {
+  transform: scale(1.02);
+}
+
+/* introdução e texto */
+#introduction {
+  margin-top: 0.5rem;
+}
+
+#briefAm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#briefAm h3:last-child {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* ========== SEÇÃO PROJETOS ========== */
+#projects .row {
+  --bs-gutter-y: 2rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ========== SEÇÃO CONTATO ========== */
+#contact {
+  background: var(--bg-secondary);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+#contact fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contact legend {
+  float: none;
+  width: auto;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+#contact a {
+  display: inline-block;
+  background-color: rgba(58, 110, 165, 0.15);
+  color: var(--accent-hover);
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  margin: 0.5rem 0.3rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+#contact a:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #080808;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ========== RESPONSIVIDADE (MOBILE FIRST + TABLET/DESKTOP) ========== */
+@media (min-width: 768px) {
+  main {
+    padding: 2rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #aboutme {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  #profile picture {
+    flex-shrink: 0;
+    max-width: 180px;
+  }
+
+  #introduction {
+    text-align: left;
+  }
+
+  #briefAm {
+    text-align: left;
+    margin: 0;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+
+  #contact a {
+    padding: 0.8rem 1.8rem;
+    margin: 0.5rem 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+
+  .nav-item .nav-link {
+    padding: 0.5rem 1.2rem;
+  }
+
+  #profile picture {
+    max-width: 200px;
+  }
+}
+
+/* ========== AJUSTES GERAIS ========== */
+/* remove classes inválidas do bootstrap que estavam quebrando layout */
+header[class*="col"], 
+main[class*="col"], 
+footer[class*="col"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* garante que imagens carreguem sem distorção */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* links sem formatação extra */
+a {
+  transition: all 0.2s;
+}
+
+/* scroll suave no clique dos links da navbar */
+html {
+  scroll-padding-top: 70px;
+}
+
+/* melhora acessibilidade de foco */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
